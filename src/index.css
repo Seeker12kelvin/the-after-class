@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+  width: 100%;
+  min-height: 100dvh; /* Fix: Let the page grow if content is longer than the screen */
+  max-width: 100vw;
+  position: relative;
+  overflow: hidden;
+  margin: 0; /* Ensures no default browser gaps push things down */
+}
