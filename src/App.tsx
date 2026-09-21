@@ -37,12 +37,12 @@ const App = () => {
         alt="The logo of THE AFTER CLASS"
         className="
           w-[70vw]
-          max-w-120
-          min-w-40
+          max-w-80
+          min-w-30
           object-contain
-          sm:w-[50vw]
-          md:w-[45vw]
-          lg:w-[40vw]
+          sm:w-[40vw]
+          md:w-[35vw]
+          lg:w-[30vw]
         "
       />
 
