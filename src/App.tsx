@@ -1,30 +1,30 @@
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+// import gsap from "gsap";
+// import { useGSAP } from "@gsap/react";
 
 import logo from "./assets/images/THE-AFTER-CLASS-NEW-LOGO.svg";
 
 const App = () => {
   const container = useRef<HTMLElement>(null);
 
-  const text = "Coming Soon...";
+  // const text = "Coming Soon...";
 
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        ".char",
-        { opacity: 0, y: 10 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.35,
-          stagger: 0.08,
-          ease: "power2.out",
-        },
-      );
-    },
-    { scope: container },
-  );
+  // useGSAP(
+  //   () => {
+  //     gsap.fromTo(
+  //       ".char",
+  //       { opacity: 0, y: 10 },
+  //       {
+  //         opacity: 1,
+  //         y: 0,
+  //         duration: 0.35,
+  //         stagger: 0.08,
+  //         ease: "power2.out",
+  //       },
+  //     );
+  //   },
+  //   { scope: container },
+  // );
 
   return (
     <main
@@ -47,7 +47,7 @@ const App = () => {
       />
 
       {/* Coming Soon */}
-      <p
+      {/* <p
         className="
           absolute
           bottom-[12%]
@@ -68,7 +68,7 @@ const App = () => {
             {char}
           </span>
         ))}
-      </p>
+      </p> */}
     </main>
   );
 };
