@@ -95,7 +95,10 @@ const Logo = () => {
   );
 
   return (
-    <div ref={logoRef} className="flex w-fit items-end">
+    <div
+      ref={logoRef}
+      className="flex w-fit items-end max-xl:scale-75 max-lg:scale-60"
+    >
       <div className="flex h-fit">
         <div ref={diagonalRef} className="w-60 h-3 bg-white" />
         <div className="container flex">
