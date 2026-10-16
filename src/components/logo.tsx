@@ -53,14 +53,29 @@ const Logo = () => {
 
   useGSAP(
     () => {
-      const animDuration = { duration: 0.1 };
+      const animDuration = { duration: 0.15 };
       gsap.set(".text-animation", { opacity: 0, xPercent: 100 });
       const tl = gsap.timeline();
 
       tl.to([".first", ".second", ".third", ".fourth", ".fifth", ".sixth"], {
         marginLeft: 10,
         ...animDuration,
+      }).to(diagonalRef.current, {
+        yPercent: -400,
+        rotation: -40,
+        ...animDuration,
       });
+      animTarget.map((data: AnimTargetProp) =>
+        tl.to(
+          data.class,
+          {
+            yPercent: data.first.yPercent,
+            xPercent: data.first.xPercent,
+            ...animDuration,
+          },
+          "<",
+        ),
+      );
       tl.to(diagonalRef.current, {
         yPercent: -650,
         rotation: -70,
